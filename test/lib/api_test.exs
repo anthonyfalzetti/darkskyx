@@ -120,8 +120,8 @@ defmodule Darkskyx.ApiTest do
         time_machine_keys
         |> Enum.each(fn key ->
           case key do
-            "daily" -> refute Enum.member?(Map.keys(time_machine), key)
             "hourly" -> refute Enum.member?(Map.keys(time_machine), key)
+            "daily" -> refute Enum.member?(Map.keys(time_machine), key)
             _ -> assert Enum.member?(Map.keys(time_machine), key)
           end
         end)
